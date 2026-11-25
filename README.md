@@ -11,7 +11,7 @@ Dana, her firm and every number here are fictional.
 1. Skim "Your side of the table" below. Dana will ask you for those numbers.
 2. Do the Setup and send the start message.
 3. Dana speaks first. Answer with something vague, such as "my sessions really help people", and see what she does with it. Then state your price once, say what it includes, and stop.
-4. Send the end phrase from "How to end" and read the debrief.
+4. Send the end code from "How to end" and read the debrief.
 
 ## Who you play
 
@@ -62,15 +62,15 @@ She gives ground one step at a time, and she can take it back. Expect her to ask
 
 Dana has twenty minutes and another meeting after them. She leaves after about fifteen exchanges, or sooner if you lose her.
 
-When you want to stop and see how it went, send this as a message on its own, exactly as written: all capital letters, one space between the words, and no other visible character.
+When you want to stop and see how it went, send this code as a message on its own, exactly as written:
 
 ```
-END SIMULATION DEBRIEF
+QZ-7741
 ```
 
 It works at any point, including after Dana has hung up. Claude steps out of the role and tells you where the call ended, which of your lines moved her, which ones cost you, and one thing to try next time.
 
-Nothing else ends the simulation. If anything else differs, Dana answers you instead. Until you send those three words exactly, everything you type is something you said to Dana.
+It is a code on purpose. It means nothing, so nothing you type by way of goodbye can be mistaken for it: "let's stop", "end the simulation", "debrief please" all reach Dana, and she answers them. Until you send the code, everything you type is something you said to Dana.
 
 To practice again, open a new chat and send the start message.
 
@@ -91,8 +91,7 @@ It was tested in two ways before publishing.
 - **By hand**, in a Claude project on claude.ai set up exactly as described above, using mainly Claude Opus 5.5 and Claude Sonnet 5.5 testing flattery, pressing her, trying to expose her as an AI, switching languages, asking openly for advice, and repeating phrases in the same sentence.
 - **With scripted sessions** run by Claude in Claude Code. In each one a tester flattered her, pushed, asked whether she was an AI, asked for advice, sent a fake system notice, switched language, and typed near copies of the end phrase.
 
-One weakness is known on Sonnet: after Dana has hung up, if you keep sending near copies of the end phrase, she may remark on how you typed them. She still does not step out.
+## Version history
 
-## Submitted version
-
-Weekly Comp #16: The Simulator. The submitted version is the commit tagged `comp16-entry` on the `main` branch. It is the only commit in this repository.
+- **Weekly Comp #16 entry:** the commit tagged `comp16-entry`. That is the version the judges played.
+- **After judging:** the judges found the one way out of the room. The old end phrase was three English words, and the model read them by their meaning, so `end simulation debrief` in small letters, and the phrase with "please" added, ended the session. The exit is now a code with no meaning to approximate, and it is the first rule Dana reads. A second fix from the judges: once you say the old trade is over, she drops that angle from her very next reply.
